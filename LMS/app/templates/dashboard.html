@@ -1,0 +1,789 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<body class="home">
+    <div class="container-fluid display-table">
+        <div class="row display-table-row">
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+                <div class="logo">
+                    <a hef="home.html"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNjg2cHgiIGhlaWdodD0iMTI2cHgiIHZpZXdCb3g9IjAgMCA2ODYgMTI2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1NC4xICg3NjQ5MCkgLSBodHRwczovL3NrZXRjaGFwcC5jb20gLS0+CiAgICA8dGl0bGU+RmluYWwgRmluYWwgRmluYWwgTG9nbzwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMzUuNDUwMDcyNyUiIHkxPSI2MS4xOTM4NDk0JSIgeDI9Ijg1Ljc4NTA3OTglIiB5Mj0iMjUuNjA0MzY1NiUiIGlkPSJsaW5lYXJHcmFkaWVudC0xIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0VGNTM2NiIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRDcxRTIzIiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMTQuMjE0OTIwMiUiIHkxPSI3NC43MTY5MzY3JSIgeDI9IjU4LjgzNTA2ODIlIiB5Mj0iNDEuNzQwMDQ2NyUiIGlkPSJsaW5lYXJHcmFkaWVudC0yIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0Q3MUUyMyIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRUY1MzY2IiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgaWQ9IkZpbmFsLUZpbmFsLUZpbmFsLUxvZ28iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJHcm91cC0yIj4KICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJmaW5hbC1sb2dvIj4KICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iR3JvdXAtMTMiPgogICAgICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUmVjdGFuZ2xlLUNvcHktNCIgZmlsbD0idXJsKCNsaW5lYXJHcmFkaWVudC0xKSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjguNjg0Mzk5LCAzMy45MDYyNTApIHNjYWxlKC0xLCAtMSkgdHJhbnNsYXRlKC0yOC42ODQzOTksIC0zMy45MDYyNTApICIgcG9pbnRzPSIxLjAxOTA3NDU2ZS0xMyAzNC43ODUzMTQ0IDU3LjM2ODc5NzcgMCA1Ny4zNjg3OTc3IDMxLjI5ODA3NjkgMS4wMTkwNzQ1NmUtMTMgNjcuODEyNSI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUmVjdGFuZ2xlLUNvcHktNCIgZmlsbD0iI0VGNTM2NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjguNjg0Mzk5LCA3MC4wNzI5MTcpIHNjYWxlKDEsIC0xKSB0cmFuc2xhdGUoLTI4LjY4NDM5OSwgLTcwLjA3MjkxNykgIiBwb2ludHM9IjEuMDE5MDc0NTZlLTEzIDcwLjk1MTk4MSA1Ny4zNjg3OTc3IDM2LjE2NjY2NjcgNTcuMzY4Nzk3NyA2Ny40NjQ3NDM2IDEuMDE5MDc0NTZlLTEzIDEwMy45NzkxNjciPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlJlY3RhbmdsZS1Db3B5LTQiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMikiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgyLjE2MTExNywgNTUuOTI3MDgzKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC04Mi4xNjExMTcsIC01NS45MjcwODMpICIgcG9pbnRzPSI1My40NzY3MTg1IDU2LjgwNjE0NzcgMTEwLjg0NTUxNiAyMi4wMjA4MzMzIDExMC44NDU1MTYgNTMuMzE4OTEwMyA1My40NzY3MTg1IDg5LjgzMzMzMzMiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlJlY3RhbmdsZS1Db3B5LTQiIGZpbGw9IiNFRjUzNjYiIHBvaW50cz0iNTMuNDc2NzE4NSA5Mi45NzI4MTQ0IDExMC44NDU1MTYgNTguMTg3NSAxMTAuODQ1NTE2IDg5LjQ4NTU3NjkgNTMuNDc2NzE4NSAxMjYiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPHBhdGggZD0iTTEzNC41OTQ5MzcsNzkuMTMxMzU1OSBMMTUxLjcwODUyOCw3OS4xMzEzNTU5IEMxNTEuOTQxMzY2LDg0LjE2NTI1NDIgMTU2LjAxNjAzLDg4LjYyNzExODYgMTYzLjY5OTY4Myw4OC42MjcxMTg2IEMxNzAuNTY4NDAzLDg4LjYyNzExODYgMTc1LjM0MTU4Miw4NS40MjM3Mjg4IDE3NS40NTgwMDEsODAuMjc1NDIzNyBDMTc1LjU3NDQyLDc2LjcyODgxMzYgMTczLjk0NDU1NCw3My42Mzk4MzA1IDE2NS43OTUyMjUsNzEuMzUxNjk0OSBMMTU2LjEzMjQ0OSw2OC43MjAzMzkgQzEzOC40MzY3NjMsNjMuMzQzMjIwMyAxMzUuNDA5ODcsNTMuMTYxMDE2OSAxMzUuNDA5ODcsNDYuMDY3Nzk2NiBDMTM1LjQwOTg3LDMxLjk5NTc2MjcgMTQ3LjYzMzg2MywyMi41IDE2My4wMDExNjksMjIuNSBDMTc4LjQ4NDg5NCwyMi41IDE5MC4xMjY3OTMsMzEuNTM4MTM1NiAxOTAuMTI2NzkzLDQ2LjYzOTgzMDUgTDE3My4xMjk2MjEsNDYuNjM5ODMwNSBDMTczLjEyOTYyMSw0MS4zNzcxMTg2IDE2OS41MjA2MzIsMzcuNzE2MTAxNyAxNjIuNzY4MzMxLDM3LjcxNjEwMTcgQzE1Ni44MzA5NjMsMzcuNzE2MTAxNyAxNTIuNDA3MDQxLDQwLjkxOTQ5MTUgMTUyLjQwNzA0MSw0NS42MTAxNjk1IEMxNTIuNDA3MDQxLDQ3LjY2OTQ5MTUgMTUzLjIyMTk3NCw1MS40NDQ5MTUzIDE2MS4wMjIwNDYsNTMuNjE4NjQ0MSBMMTcwLjU2ODQwMyw1Ni41OTMyMjAzIEMxOTAuMDEwMzc0LDYyLjA4NDc0NTggMTkyLjgwNDQyOSw3Mi44Mzg5ODMxIDE5Mi41NzE1OTEsODAuMzg5ODMwNSBDMTkyLjMzODc1NCw5Ni4wNjM1NTkzIDE3Ny45MDI3OTksMTAzLjUgMTYzLjY5OTY4MywxMDMuNSBDMTQ2LjIzNjgzNSwxMDMuNSAxMzQuNTk0OTM3LDkzLjMxNzc5NjYgMTM0LjU5NDkzNyw3OS4xMzEzNTU5IFogTTIwNi44MTk0NDMsMjMuNDE1MjU0MiBMMjI2Ljc1MzEzMiwyMy40MTUyNTQyIEwyMjYuNzUzMTMyLDEwMi4yNDE1MjUgTDIwOS43NTU5NiwxMDIuMjQxNTI1IEwyMDkuNzU1OTYsMzIuMjcxNDA0NSBMMjA2LjgxOTQ0MywyMy40MTUyNTQyIFogTTI5Mi40ODQyMTcsNzQuMjExODY0NCBMMzE2LjQ2NjUyOCwyMy40MTUyNTQyIEwzMzAuNzg2MDYzLDIzLjQxNTI1NDIgTDM0MC41NjUyNTgsMTAyLjI0MTUyNSBMMzIzLjQ1MTY2NywxMDIuMjQxNTI1IEwzMTcuODYzNTU2LDU0Ljk5MTUyNTQgTDI5OS4xMjAwOTksOTMuMjAzMzg5OCBMMjg1Ljk2NDc1NCw5My4yMDMzODk4IEwyNjcuMTA0ODc4LDU0Ljk5MTUyNTQgTDI2MS40MDAzNDgsMTAyLjI0MTUyNSBMMjQ0LjI4Njc1NywxMDIuMjQxNTI1IEwyNTMuMDY3NDg3LDMyLjI5NjE2ODMgTDI0OS43NzY5OTQsMjMuNDE1MjU0MiBMMjY4LjI2OTA2OCwyMy40MTUyNTQyIEwyOTIuNDg0MjE3LDc0LjIxMTg2NDQgWiBNMzU4LjA5ODg4MywxMDIuMjQxNTI1IEwzNTguMDk4ODgzLDMyLjk1NzEyMDQgTDM1NC45NzI0NzYsMjMuNDE1MjU0MiBMNDA4LjI3NTQ2NiwyMy40MTUyNTQyIEw0MDguMjc1NDY2LDM4LjE3MzcyODggTDM3NS4yMTI0NzQsMzguMTczNzI4OCBMMzc1LjIxMjQ3NCw1Ni4xMzU1OTMyIEw0MDEuNDA2NzQ2LDU2LjEzNTU5MzIgTDQwMS40MDY3NDYsNzAuNzc5NjYxIEwzNzUuMjEyNDc0LDcwLjc3OTY2MSBMMzc1LjIxMjQ3NCwxMDIuMjQxNTI1IEwzNTguMDk4ODgzLDEwMi4yNDE1MjUgWiBNNDM1LjQ3MTg2Nyw2MyBDNDM1LjQ3MTg2Nyw3Ni4xNTY3Nzk3IDQ0NS44MzMxNTYsODYuNzk2NjEwMiA0NTkuMTA0OTIxLDg2Ljc5NjYxMDIgQzQ3Mi4zNzY2ODUsODYuNzk2NjEwMiA0ODIuODU0Mzk0LDc2LjE1Njc3OTcgNDgyLjg1NDM5NCw2MyBDNDgyLjg1NDM5NCw0OS44NDMyMjAzIDQ3Mi4zNzY2ODUsMzkuMDg4OTgzMSA0NTkuMTA0OTIxLDM5LjA4ODk4MzEgQzQ0NS44MzMxNTYsMzkuMDg4OTgzMSA0MzUuNDcxODY3LDQ5Ljg0MzIyMDMgNDM1LjQ3MTg2Nyw2MyBaIE00MTguNDc0Njk1LDYzIEM0MTguNDc0Njk1LDQwLjU3NjI3MTIgNDM2LjQwMzIxOCwyMi41IDQ1OS4xMDQ5MjEsMjIuNSBDNDgxLjkyMzA0MiwyMi41IDQ5OS44NTE1NjYsNDAuNTc2MjcxMiA0OTkuODUxNTY2LDYzIEM0OTkuODUxNTY2LDg1LjE5NDkxNTMgNDgxLjkyMzA0MiwxMDMuMzg1NTkzIDQ1OS4xMDQ5MjEsMTAzLjM4NTU5MyBDNDM2LjQwMzIxOCwxMDMuMzg1NTkzIDQxOC40NzQ2OTUsODUuMTk0OTE1MyA0MTguNDc0Njk1LDYzIFogTTU0OS4xNjc1NzQsMzguMTczNzI4OCBMNTM0LjI2NTk0NCwzOC4xNzM3Mjg4IEw1MzQuMjY1OTQ0LDYwLjM2ODY0NDEgTDU0OC43MDE4OTgsNjAuMzY4NjQ0MSBDNTU1LjMzNzc4LDYwLjM2ODY0NDEgNTU4LjgzMDM1LDU0LjQxOTQ5MTUgNTU4LjgzMDM1LDQ5LjI3MTE4NjQgQzU1OC44MzAzNSw0NC4zNTE2OTQ5IDU1NS41NzA2MTgsMzguMTczNzI4OCA1NDkuMTY3NTc0LDM4LjE3MzcyODggWiBNNTU2LjYxODM4OSw3NC4zMjYyNzEyIEw1NzguNTYyODY1LDEwMi4yNDE1MjUgTDU1OC4wNzMxMjQsMTAyLjI0MTUyNSBMNTM4LjEwNzc3LDc1LjAxMjcxMTkgTDUzNC4yNjU5NDQsNzUuMDEyNzExOSBMNTM0LjI2NTk0NCwxMDIuMjQxNTI1IEw1MTcuMTUyMzUzLDEwMi4yNDE1MjUgTDUxNy4xNTIzNTMsMzIuNTU0MTM3NSBMNTEzLjgxMTE1OCwyMy40MTUyNTQyIEw1NDkuOTgyNTA3LDIzLjQxNTI1NDIgQzU2OC4xNDM4NjgsMjMuNDE1MjU0MiA1NzYuNjQyNDU0LDM2LjM0MzIyMDMgNTc2LjY0MjQ1NCw0OS4yNzExODY0IEM1NzYuNjQyNDU0LDYwLjQ4MzA1MDggNTcwLjM1NTgyOSw3MS40NjYxMDE3IDU1Ni42MTgzODksNzQuMzI2MjcxMiBaIE02MzcuOTE4OTU5LDczLjI5NjYxMDIgTDY2MS45MDEyNywyMi41IEw2NzYuMjIwODA1LDIyLjUgTDY4NiwxMDEuMzI2MjcxIEw2NjguODg2NDA5LDEwMS4zMjYyNzEgTDY2My4yOTgyOTgsNTQuMDc2MjcxMiBMNjQ0LjU1NDg0MSw5Mi4yODgxMzU2IEw2MzEuMzk5NDk2LDkyLjI4ODEzNTYgTDYxMi41Mzk2Miw1NC4wNzYyNzEyIEw2MDYuODM1MDksMTAxLjMyNjI3MSBMNTg5LjcyMTQ5OSwxMDEuMzI2MjcxIEw1OTguNTAyMjI5LDMxLjM4MDkxNCBMNTk1LjIxMTczNywyMi41IEw2MTMuNzAzODEsMjIuNSBMNjM3LjkxODk1OSw3My4yOTY2MTAyIFoiIGlkPSJTSU1GT1JNIiBmaWxsPSIjRUY1MzY2IiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==" alt="simform" class="hidden-xs hidden-sm">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNjg2cHgiIGhlaWdodD0iMTI2cHgiIHZpZXdCb3g9IjAgMCA2ODYgMTI2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1NC4xICg3NjQ5MCkgLSBodHRwczovL3NrZXRjaGFwcC5jb20gLS0+CiAgICA8dGl0bGU+RmluYWwgRmluYWwgRmluYWwgTG9nbzwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMzUuNDUwMDcyNyUiIHkxPSI2MS4xOTM4NDk0JSIgeDI9Ijg1Ljc4NTA3OTglIiB5Mj0iMjUuNjA0MzY1NiUiIGlkPSJsaW5lYXJHcmFkaWVudC0xIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0VGNTM2NiIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRDcxRTIzIiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMTQuMjE0OTIwMiUiIHkxPSI3NC43MTY5MzY3JSIgeDI9IjU4LjgzNTA2ODIlIiB5Mj0iNDEuNzQwMDQ2NyUiIGlkPSJsaW5lYXJHcmFkaWVudC0yIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0Q3MUUyMyIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRUY1MzY2IiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgaWQ9IkZpbmFsLUZpbmFsLUZpbmFsLUxvZ28iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJHcm91cC0yIj4KICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJmaW5hbC1sb2dvIj4KICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iR3JvdXAtMTMiPgogICAgICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUmVjdGFuZ2xlLUNvcHktNCIgZmlsbD0idXJsKCNsaW5lYXJHcmFkaWVudC0xKSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjguNjg0Mzk5LCAzMy45MDYyNTApIHNjYWxlKC0xLCAtMSkgdHJhbnNsYXRlKC0yOC42ODQzOTksIC0zMy45MDYyNTApICIgcG9pbnRzPSIxLjAxOTA3NDU2ZS0xMyAzNC43ODUzMTQ0IDU3LjM2ODc5NzcgMCA1Ny4zNjg3OTc3IDMxLjI5ODA3NjkgMS4wMTkwNzQ1NmUtMTMgNjcuODEyNSI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUmVjdGFuZ2xlLUNvcHktNCIgZmlsbD0iI0VGNTM2NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjguNjg0Mzk5LCA3MC4wNzI5MTcpIHNjYWxlKDEsIC0xKSB0cmFuc2xhdGUoLTI4LjY4NDM5OSwgLTcwLjA3MjkxNykgIiBwb2ludHM9IjEuMDE5MDc0NTZlLTEzIDcwLjk1MTk4MSA1Ny4zNjg3OTc3IDM2LjE2NjY2NjcgNTcuMzY4Nzk3NyA2Ny40NjQ3NDM2IDEuMDE5MDc0NTZlLTEzIDEwMy45NzkxNjciPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlJlY3RhbmdsZS1Db3B5LTQiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMikiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgyLjE2MTExNywgNTUuOTI3MDgzKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC04Mi4xNjExMTcsIC01NS45MjcwODMpICIgcG9pbnRzPSI1My40NzY3MTg1IDU2LjgwNjE0NzcgMTEwLjg0NTUxNiAyMi4wMjA4MzMzIDExMC44NDU1MTYgNTMuMzE4OTEwMyA1My40NzY3MTg1IDg5LjgzMzMzMzMiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlJlY3RhbmdsZS1Db3B5LTQiIGZpbGw9IiNFRjUzNjYiIHBvaW50cz0iNTMuNDc2NzE4NSA5Mi45NzI4MTQ0IDExMC44NDU1MTYgNTguMTg3NSAxMTAuODQ1NTE2IDg5LjQ4NTU3NjkgNTMuNDc2NzE4NSAxMjYiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPHBhdGggZD0iTTEzNC41OTQ5MzcsNzkuMTMxMzU1OSBMMTUxLjcwODUyOCw3OS4xMzEzNTU5IEMxNTEuOTQxMzY2LDg0LjE2NTI1NDIgMTU2LjAxNjAzLDg4LjYyNzExODYgMTYzLjY5OTY4Myw4OC42MjcxMTg2IEMxNzAuNTY4NDAzLDg4LjYyNzExODYgMTc1LjM0MTU4Miw4NS40MjM3Mjg4IDE3NS40NTgwMDEsODAuMjc1NDIzNyBDMTc1LjU3NDQyLDc2LjcyODgxMzYgMTczLjk0NDU1NCw3My42Mzk4MzA1IDE2NS43OTUyMjUsNzEuMzUxNjk0OSBMMTU2LjEzMjQ0OSw2OC43MjAzMzkgQzEzOC40MzY3NjMsNjMuMzQzMjIwMyAxMzUuNDA5ODcsNTMuMTYxMDE2OSAxMzUuNDA5ODcsNDYuMDY3Nzk2NiBDMTM1LjQwOTg3LDMxLjk5NTc2MjcgMTQ3LjYzMzg2MywyMi41IDE2My4wMDExNjksMjIuNSBDMTc4LjQ4NDg5NCwyMi41IDE5MC4xMjY3OTMsMzEuNTM4MTM1NiAxOTAuMTI2NzkzLDQ2LjYzOTgzMDUgTDE3My4xMjk2MjEsNDYuNjM5ODMwNSBDMTczLjEyOTYyMSw0MS4zNzcxMTg2IDE2OS41MjA2MzIsMzcuNzE2MTAxNyAxNjIuNzY4MzMxLDM3LjcxNjEwMTcgQzE1Ni44MzA5NjMsMzcuNzE2MTAxNyAxNTIuNDA3MDQxLDQwLjkxOTQ5MTUgMTUyLjQwNzA0MSw0NS42MTAxNjk1IEMxNTIuNDA3MDQxLDQ3LjY2OTQ5MTUgMTUzLjIyMTk3NCw1MS40NDQ5MTUzIDE2MS4wMjIwNDYsNTMuNjE4NjQ0MSBMMTcwLjU2ODQwMyw1Ni41OTMyMjAzIEMxOTAuMDEwMzc0LDYyLjA4NDc0NTggMTkyLjgwNDQyOSw3Mi44Mzg5ODMxIDE5Mi41NzE1OTEsODAuMzg5ODMwNSBDMTkyLjMzODc1NCw5Ni4wNjM1NTkzIDE3Ny45MDI3OTksMTAzLjUgMTYzLjY5OTY4MywxMDMuNSBDMTQ2LjIzNjgzNSwxMDMuNSAxMzQuNTk0OTM3LDkzLjMxNzc5NjYgMTM0LjU5NDkzNyw3OS4xMzEzNTU5IFogTTIwNi44MTk0NDMsMjMuNDE1MjU0MiBMMjI2Ljc1MzEzMiwyMy40MTUyNTQyIEwyMjYuNzUzMTMyLDEwMi4yNDE1MjUgTDIwOS43NTU5NiwxMDIuMjQxNTI1IEwyMDkuNzU1OTYsMzIuMjcxNDA0NSBMMjA2LjgxOTQ0MywyMy40MTUyNTQyIFogTTI5Mi40ODQyMTcsNzQuMjExODY0NCBMMzE2LjQ2NjUyOCwyMy40MTUyNTQyIEwzMzAuNzg2MDYzLDIzLjQxNTI1NDIgTDM0MC41NjUyNTgsMTAyLjI0MTUyNSBMMzIzLjQ1MTY2NywxMDIuMjQxNTI1IEwzMTcuODYzNTU2LDU0Ljk5MTUyNTQgTDI5OS4xMjAwOTksOTMuMjAzMzg5OCBMMjg1Ljk2NDc1NCw5My4yMDMzODk4IEwyNjcuMTA0ODc4LDU0Ljk5MTUyNTQgTDI2MS40MDAzNDgsMTAyLjI0MTUyNSBMMjQ0LjI4Njc1NywxMDIuMjQxNTI1IEwyNTMuMDY3NDg3LDMyLjI5NjE2ODMgTDI0OS43NzY5OTQsMjMuNDE1MjU0MiBMMjY4LjI2OTA2OCwyMy40MTUyNTQyIEwyOTIuNDg0MjE3LDc0LjIxMTg2NDQgWiBNMzU4LjA5ODg4MywxMDIuMjQxNTI1IEwzNTguMDk4ODgzLDMyLjk1NzEyMDQgTDM1NC45NzI0NzYsMjMuNDE1MjU0MiBMNDA4LjI3NTQ2NiwyMy40MTUyNTQyIEw0MDguMjc1NDY2LDM4LjE3MzcyODggTDM3NS4yMTI0NzQsMzguMTczNzI4OCBMMzc1LjIxMjQ3NCw1Ni4xMzU1OTMyIEw0MDEuNDA2NzQ2LDU2LjEzNTU5MzIgTDQwMS40MDY3NDYsNzAuNzc5NjYxIEwzNzUuMjEyNDc0LDcwLjc3OTY2MSBMMzc1LjIxMjQ3NCwxMDIuMjQxNTI1IEwzNTguMDk4ODgzLDEwMi4yNDE1MjUgWiBNNDM1LjQ3MTg2Nyw2MyBDNDM1LjQ3MTg2Nyw3Ni4xNTY3Nzk3IDQ0NS44MzMxNTYsODYuNzk2NjEwMiA0NTkuMTA0OTIxLDg2Ljc5NjYxMDIgQzQ3Mi4zNzY2ODUsODYuNzk2NjEwMiA0ODIuODU0Mzk0LDc2LjE1Njc3OTcgNDgyLjg1NDM5NCw2MyBDNDgyLjg1NDM5NCw0OS44NDMyMjAzIDQ3Mi4zNzY2ODUsMzkuMDg4OTgzMSA0NTkuMTA0OTIxLDM5LjA4ODk4MzEgQzQ0NS44MzMxNTYsMzkuMDg4OTgzMSA0MzUuNDcxODY3LDQ5Ljg0MzIyMDMgNDM1LjQ3MTg2Nyw2MyBaIE00MTguNDc0Njk1LDYzIEM0MTguNDc0Njk1LDQwLjU3NjI3MTIgNDM2LjQwMzIxOCwyMi41IDQ1OS4xMDQ5MjEsMjIuNSBDNDgxLjkyMzA0MiwyMi41IDQ5OS44NTE1NjYsNDAuNTc2MjcxMiA0OTkuODUxNTY2LDYzIEM0OTkuODUxNTY2LDg1LjE5NDkxNTMgNDgxLjkyMzA0MiwxMDMuMzg1NTkzIDQ1OS4xMDQ5MjEsMTAzLjM4NTU5MyBDNDM2LjQwMzIxOCwxMDMuMzg1NTkzIDQxOC40NzQ2OTUsODUuMTk0OTE1MyA0MTguNDc0Njk1LDYzIFogTTU0OS4xNjc1NzQsMzguMTczNzI4OCBMNTM0LjI2NTk0NCwzOC4xNzM3Mjg4IEw1MzQuMjY1OTQ0LDYwLjM2ODY0NDEgTDU0OC43MDE4OTgsNjAuMzY4NjQ0MSBDNTU1LjMzNzc4LDYwLjM2ODY0NDEgNTU4LjgzMDM1LDU0LjQxOTQ5MTUgNTU4LjgzMDM1LDQ5LjI3MTE4NjQgQzU1OC44MzAzNSw0NC4zNTE2OTQ5IDU1NS41NzA2MTgsMzguMTczNzI4OCA1NDkuMTY3NTc0LDM4LjE3MzcyODggWiBNNTU2LjYxODM4OSw3NC4zMjYyNzEyIEw1NzguNTYyODY1LDEwMi4yNDE1MjUgTDU1OC4wNzMxMjQsMTAyLjI0MTUyNSBMNTM4LjEwNzc3LDc1LjAxMjcxMTkgTDUzNC4yNjU5NDQsNzUuMDEyNzExOSBMNTM0LjI2NTk0NCwxMDIuMjQxNTI1IEw1MTcuMTUyMzUzLDEwMi4yNDE1MjUgTDUxNy4xNTIzNTMsMzIuNTU0MTM3NSBMNTEzLjgxMTE1OCwyMy40MTUyNTQyIEw1NDkuOTgyNTA3LDIzLjQxNTI1NDIgQzU2OC4xNDM4NjgsMjMuNDE1MjU0MiA1NzYuNjQyNDU0LDM2LjM0MzIyMDMgNTc2LjY0MjQ1NCw0OS4yNzExODY0IEM1NzYuNjQyNDU0LDYwLjQ4MzA1MDggNTcwLjM1NTgyOSw3MS40NjYxMDE3IDU1Ni42MTgzODksNzQuMzI2MjcxMiBaIE02MzcuOTE4OTU5LDczLjI5NjYxMDIgTDY2MS45MDEyNywyMi41IEw2NzYuMjIwODA1LDIyLjUgTDY4NiwxMDEuMzI2MjcxIEw2NjguODg2NDA5LDEwMS4zMjYyNzEgTDY2My4yOTgyOTgsNTQuMDc2MjcxMiBMNjQ0LjU1NDg0MSw5Mi4yODgxMzU2IEw2MzEuMzk5NDk2LDkyLjI4ODEzNTYgTDYxMi41Mzk2Miw1NC4wNzYyNzEyIEw2MDYuODM1MDksMTAxLjMyNjI3MSBMNTg5LjcyMTQ5OSwxMDEuMzI2MjcxIEw1OTguNTAyMjI5LDMxLjM4MDkxNCBMNTk1LjIxMTczNywyMi41IEw2MTMuNzAzODEsMjIuNSBMNjM3LjkxODk1OSw3My4yOTY2MTAyIFoiIGlkPSJTSU1GT1JNIiBmaWxsPSIjRUY1MzY2IiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==" alt="simform" class="visible-xs visible-sm circle-logo">
+                    </a>
+                </div>
+                <div class="navi">
+                    <ul>
+                        <li class="active"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm"> <a href="homebtn.html"> Home</span></a></li>
+                        <a href="homebtn.html">
+                        <li><a href="#"><i class="fah fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Submission</span></a></li>
+                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Gradding</span></a></li>
+                        <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="col-md-10 col-sm-11 display-table-cell v-align">
+                <div class="row">
+                    <header>
+                        <div class="col-md-7">
+                            <nav class="navbar-default pull-left">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                            </nav>
+                            <div class="search hidden-xs hidden-sm">
+                                <input type="text" placeholder="Search" id="search">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="header-rightside">
+                                <ul class="list-inline header-top pull-right">
+                                    
+                                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                    <li>
+                                        <a href="#" class="icon-info">
+                                            <i class="fa fa-bell" aria-hidden="true"></i>
+                                            <span class="label label-primary">3</span>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src=https://lms.simformsolutions.com/theme/image.php/boost/core/1677742341/u/f2 alt="user">
+                                            <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="navbar-content">
+                                                    
+                                                    <p class="text-muted small">
+                                                        
+                                                    </p>
+                                                    <div class="divider">
+                                                    </div>
+                                                    <a href="#" class="view btn-sm active">View Profile</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <div class="user-dashboard">
+                    <h1>  Python Training Program </h1>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-12 gutter">
+
+                            <div class="sales">
+                                <h2></h2>
+
+                                <div class="btn-group">
+                                   
+                                    <div class="dropdown-menu">
+                                        <a href="#">2012</a>
+                                        <a href="#">2014</a>
+                                        <a href="#">2015</a>
+                                        <a href="#">2016</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-12 gutter">
+
+                            
+                                <div class="btn-group">
+                                   
+                                    <div class="dropdown-menu">
+                                        <a href="#">2012</a>
+                                        <a href="#">2014</a>
+                                        <a href="#">2015</a>
+                                        <a href="#">2016</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="add_project" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header login-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Add Project</h4>
+                </div>
+                <div class="modal-body">
+                            <input type="text" placeholder="Project Title" name="name">
+                            <input type="text" placeholder="Post of Post" name="mail">
+                            <input type="text" placeholder="Author" name="passsword">
+                            <textarea placeholder="Desicrption"></textarea>
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="cancel" data-dismiss="modal">Close</button>
+                    <button type="button" class="add-project" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<body>
+    <style>
+
+        a:focus,a:hover,a{
+            outline:none;
+            text-decoration: none;
+        }
+        li,ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .header-top i {
+            font-size: 18px;
+            
+        }
+        .bg-image {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: table;
+        }
+        .login-header {
+            display: inline-block;
+            width: 100%;
+            background: #0e1a35;
+        }
+        .login-header .navbar-right {
+            margin-right: 0px;
+        }
+        .login-header .nav-tabs > li.active > a,
+        .login-header .nav-tabs > li.active > a:focus,
+        .login-header .nav-tabs > li.active > a:hover {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+        }
+        .login-header .nav-tabs {
+            border-bottom: none;
+        }
+        .login-header .nav-tabs > li {
+            margin-bottom: 0px;
+        }
+        .login-form input {
+            
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            border-color: -moz-use-text-color -moz-use-text-color #d4d9e3;
+            border-image: none;
+            border-style: none none solid;
+            border-width: medium medium 1px;
+            font-size: 13px;
+            font-weight: 300;
+            width: 100%;
+            color: #8492af;
+            padding: 0px 0px;
+            font-size: 17px;
+            max-width: 550px;
+        }
+        
+        .login-form label {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        
+        .user input {
+            background: rgba(0, 0, 0, 0) url("../images/user.png") no-repeat scroll 7px 12px;
+        }
+        
+        .pass input {
+            background: rgba(0, 0, 0, 0) url("../images/password.png") no-repeat scroll 7px 12px;
+        }
+        
+        .mail input {
+            background: rgba(0, 0, 0, 0) url("../images/mail.png") no-repeat scroll 4px 12px;
+        }
+        
+        .login-signup .tab-content {
+            background: #ffffff none repeat scroll 0 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+            display: inline-block;
+            margin-top: -8px;
+            width: 100%;
+        }
+        
+        .form-btn {
+            background: #5584ff none repeat scroll 0 0;
+            border: medium none;
+            border-radius: 100px;
+            color: #ffffff;
+            font-weight: 400;
+            max-width: 250px;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+            margin: 40px 0;
+            box-shadow: 0 2px 8px #d2d2d2;
+            -moz-box-shadow: 0 2px 8px #d2d2d2;
+            -webkit-box-shadow: 0 2px 8px #d2d2d2;
+        }
+        
+        .form-btn::before {
+            content: "";
+            font-family: FontAwesome;
+            position: absolute;
+            right: 17px;
+            top: 9px;
+        }
+        
+        .form-details {
+            padding: 35px 0;
+        }
+        
+        .tab-content .tab-pane {
+            padding: 70px 0;
+        }
+        
+        
+        /*Login Signup Page*/
+        
+        
+        /*Home Page*/
+        
+        .home {
+            background: #f6f7fa;
+        }
+        
+        #navigation {
+            background: #0e1a35;
+        }
+        
+        #navigation {
+            padding: 0;
+        }
+        
+        .display-table {
+            display: table;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .display-table-row {
+            display: table-row;
+            height: 100%;
+            width:100px;
+        }
+        
+        .display-table-cell {
+            display: table-cell;
+            float: none;
+            height: 100%;
+        }
+        
+        .v-align {
+            vertical-align: top;
+        }
+        .logo img {
+            max-width: 180px;
+            padding: 16px 0 17px;
+            width: 100%;
+        }
+        
+        .header-top {
+            margin: 0;
+            padding-top: 2px;
+        }
+        
+        .header-top img {
+            border-radius: 50%;
+            max-width: 48px !important;
+            width: 100%;
+        }
+        
+        .add-project {
+            background: #5584ff none repeat scroll 0 0;
+            border-radius: 100px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 27px 10px 45px;
+            position: relative;
+        }
+        
+        .header-rightside .nav > li > a:focus,
+        .header-rightside .nav > li > a:hover {
+            background: none;
+            text-decoration: none;
+        }
+        
+        .add-project::before {
+            background: rgba(0, 0, 0, 0) url("../images/plus.png") no-repeat scroll 0 0;
+            content: "";
+            ;
+            height: 12px;
+            left: 17px;
+            position: absolute;
+            top: 12px;
+            width: 12px;
+        }
+        
+        .add-project:hover {
+            color: #ffffff;
+        }
+        
+        .header-top i {
+            color: #0e1a35;
+        }
+        
+        .icon-info {
+            position: relative;
+        }
+        .navi i {
+            font-size: 20px;
+        }
+        .label.label-primary {
+            border-radius: 50%;
+            font-size: 9px;
+            left: 8px;
+            position: absolute;
+            top: -9px;
+        }
+        
+        .icon-info .label {
+            border: 2px solid #ffffff;
+            font-weight: 500;
+            padding: 3px 5px;
+            text-align: center;
+        }
+        
+        .header-top li {
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .header-top .dropdown-toggle {
+            color: #0e1a35;
+        }
+        
+        .header-top .dropdown-menu {
+            border: medium none;
+            left: -85px;
+            padding: 17px;
+        }
+        .view {
+            background: #5584ff none repeat scroll 0 0;
+            border-radius: 100px;
+            color: #ffffff;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+            padding: 10px 15px;
+        }
+        
+        .navbar-content > span {
+            font-size: 13px;
+            font-weight: 700;
+        }
+        
+        .img-responsive {
+            width: 100%;
+        }
+        #navigation{
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        .search input {
+            border: none;
+            font-size: 15px;
+            padding: 15px 9px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0) url("../images/search.png") no-repeat scroll 99% 12px;
+            color: #8492af;
+        }
+        
+        header {
+            background: #ffffff none repeat scroll 0 0;
+            box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
+            display: inline-block !important;
+            line-height: 23px;
+            padding: 15px;
+            padding-left:50px;
+            transition: all 0.5s ease 0s;
+            width: 1600px;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        
+        .logo {
+            text-align: center;
+        }
+        
+        .navi a {
+            border-bottom: 1px solid #0d172e;
+            border-top: 1px solid #0d172e;
+            color: #ffffff;
+            display: block;
+            font-size: 17px;
+            font-weight: 500;
+            padding: 28px 20px;
+            text-decoration: none;
+        }
+        
+        .navi i {
+            margin-right: 15px;
+            color: #5584ff;
+        }
+        
+        .navi .active a {
+            background: #122143;
+            border-left: 5px solid #5584ff;
+            padding-left: 15px;
+        }
+        
+        .navi a:hover {
+            background: #122143 none repeat scroll 0 0;
+            border-left: 5px solid #5584ff;
+            display: block;
+            padding-left: 15px;
+        }
+        
+        .navbar-default {
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+        
+        .navbar-toggle {
+            border: none;
+        }
+        
+        .navbar-default .navbar-toggle:focus,
+        .navbar-default .navbar-toggle:hover {
+            background-color: rgba(0, 0, 0, 0);
+        }
+        
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #0e1a35;
+        }
+        
+        .circle-logo {
+            margin: 0 auto;
+            max-width: 30px !important;
+            text-align: center;
+        }
+        .hidden-xs{
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        
+        .user-dashboard {
+            padding: 0 20px;
+        }
+        
+        .user-dashboard h1 {
+            color: #0e1a35;
+            font-size: 30px;
+            font-weight: 500;
+            margin: 0;
+            padding: 21px 0;
+        }
+        .sales {
+            background: #ffffff none repeat scroll 0 0;
+            border: 1px solid #d4d9e3;
+            display: inline-block;
+            padding: 15px;
+            width: 1560px;
+            
+        }
+        .sales button {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            border: 1px solid #dadee7;
+            border-radius: 100px;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            padding-right: 32px;
+            color: #0e1a35;
+        }
+        
+        .sales button::before {
+            content: "";
+            font-family: FontAwesome;
+            position: absolute;
+            right: 12px;
+            top: 11px;
+        }
+        .sales  .btn-group {
+            float: right;
+        }
+        .sales h2 {
+            color: #8492af;
+            float: left;
+            font-size: 21px;
+            font-weight: 600;
+            margin: 0;
+            padding: 9px 0 0;
+            height: 1000px;
+        }
+        .btn.btn-secondary.btn-lg.dropdown-toggle > span {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .sales .dropdown-menu{
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            border-radius: 8px;
+            width: 100%;
+            color: #0e1a35;
+        }
+        .sales .btn-group.open .dropdown-toggle, .btn.active, .btn:active{
+            box-shadow: none;
+        }
+        .sales .dropdown-menu > a {
+            color: #0e1a35;
+            display: inline-block;
+            font-weight: 800;
+            padding: 9px 0;
+            text-align: center;
+            width: 100%;
+        }
+        #my-cool-chart svg {
+            width: 100%;
+        }
+        .sales .dropdown-menu > a:hover{
+            color: #5584FF;   
+        }
+        .shield-buttons {
+            display: none;
+        }
+        .close, .close:focus, .close:hover {
+            color: #fff;;
+            opacity: 1;
+            text-shadow: none;
+        }
+        .modal-body input {
+            border: 1px solid #d4d9e3;
+            font-size: 14px;
+            font-weight: 300;
+            margin: 5px 0;
+            padding: 14px 10px;
+            width: 100%;
+            color: #8492af;
+        }
+        .modal-body textarea {
+            border: 1px solid #d4d9e3;
+            font-size: 14px;
+            font-weight: 300;
+            height: 200px;
+            margin-top: 5px;
+            padding: 9px 10px;
+            width: 100%;
+            color: #8492af;
+        }
+        .modal-header.login-header h4 {
+            color: #ffffff;
+        }
+        .modal-footer .add-project {
+            background: #5584ff none repeat scroll 0 0;
+            border: medium none;
+            border-radius: 100px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 30px;
+            position: relative;
+        }
+        .modal-footer .add-project::before{display: none;}
+        .modal-footer {
+            border: 0 none;
+            padding: 10px 15px 26px;
+            text-align: right;
+        }
+        .cancel {
+            background: #0E1A35     ;
+            border: medium none;
+            border-radius: 100px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 30px;
+            position: relative;
+            
+        }
+        .modal{
+            top: 20%; 
+        }
+        .modal-header .close {
+            margin-top: 2px;
+        }
+        .search input:focus{
+            border-bottom: 1px solid #BDC4D4;
+            line-height:22px;
+            transition: 0.1s all;
+        }
+        .modal-header.login-header {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        /*Main CSS*/
+        
+        @media only screen and (max-device-width: 767px) {
+            .login-logo img {
+                margin: 0 auto;
+            }
+            .login-details .nav-tabs > li {
+                text-align: center;
+                width: 50%;
+            }
+            .login-signup .login-inner h1 {
+                font-size: 26px;
+                margin-bottom: 0;
+                margin-top: 10px;
+            }
+            .login-inner .login-form input {
+                font-size: 15px;
+                max-width: 100%;
+                padding: 15px 45px;
+            }
+            .login-inner .form-details {
+                padding: 25px;
+            }
+            .login-inner .login-form label {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            .login-inner .form-btn {
+                margin: 0;
+                max-width: 180px;
+            }
+            .tab-content .tab-pane {
+                padding: 20px 0;
+            }
+            #navigation .navi a {
+                font-size: 14px;
+                padding: 20px;
+                text-align: center;
+            }
+            #navigation .navi i {
+                margin-right: 0px;
+            }
+            #navigation .navi a:hover,
+            #navigation .navi .active a {
+                background: #122143 none repeat scroll 0 0;
+                border-left: none;
+                display: block;
+                padding-left: 20px;
+            }
+            header .header-top img {
+                max-width: 38px !important;
+            }
+            .v-align header {
+                padding: 12px 15px;
+            }
+            header .header-top li {
+                padding-left: 13px;
+                padding-right: 6px;
+            }
+            .navbar-default .navbar-toggle {
+                border-color: rgba(0, 0, 0, 0);
+            }
+            .navbar-header .navbar-toggle {
+                float: left;
+                margin: 0;
+                padding: 0;
+                top: 12px;
+            }
+            button,
+                html [type="button"],
+                [type="reset"],
+                [type="submit"] {
+                outline: medium none;
+            }
+            .user-dashboard .sales h2 {
+                color: #8492af;
+                float: left;
+                font-size: 14px;
+                font-weight: 600;
+                margin: 0;
+                padding: 13px 0 0;
+        }
+            .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle > span {
+                font-size: 11px;
+        }
+            .user-dashboard .sales button {
+                font-size: 11px;
+                padding-right: 23px;
+        }  
+            .user-dashboard .sales h2 {
+            font-size: 12px;
+        }
+        .gutter{
+            padding: 0;
+        }
+        }
+        
+        @media only screen and (max-device-width: 992px) {
+            header .header-top li {
+                padding-left: 20px !important;
+                padding-right: 0;
+        }
+            header .logo img {
+                max-width: 125px !important;
+        }
+        
+        }
+        
+        @media only screen and (min-device-width: 767px) and (max-device-width: 998px){
+              .user-dashboard .header-top {
+                padding-top: 5px;
+        }
+            .user-dashboard .header-rightside {
+                display: inline-block;
+                float: left;
+                width: 100%;
+        }
+            .user-dashboard .header-rightside .header-top img {
+                max-width: 41px !important;
+        } 
+            .user-dashboard .sales button {
+            font-size: 10px;
+        }
+            .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle > span {
+            font-size: 12px;
+        }
+            .user-dashboard .sales h2 {
+            font-size: 15px;
+        }
+        }
+        @media only screen and (min-device-width:998px) and (max-device-width: 1350px){
+                #navigation .logo img {
+            max-width: 130px;
+            padding: 16px 0 17px;
+            width: 100%;
+        }
+        }
+        $(document).ready(function(){
+            $('[data-toggle="offcanvas"]').click(function(){
+                $("#navigation").toggleClass("hidden-xs");
+            });
+         });
+         
+    </style>
+</body>
